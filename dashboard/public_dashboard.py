@@ -1,5 +1,5 @@
 """
-public_dashboard.py — Algodhan Performance Viewer
+public_dashboard.py — Smart-Trade Performance Viewer
 ===================================================
 Read-only, presentation-grade analytics dashboard.
 Designed for resume showcase, recruiter demos, and live audience viewing.
@@ -26,7 +26,7 @@ load_dotenv()
 #  PAGE CONFIG
 # ══════════════════════════════════════════════════════════════
 st.set_page_config(
-    page_title="Algodhan — Quantitative Performance Analytics",
+    page_title="Smart-Trade — Quantitative Performance Analytics",
     layout="wide",
     page_icon="📈",
     initial_sidebar_state="collapsed"
@@ -490,7 +490,7 @@ def check_market_status():
 # ══════════════════════════════════════════════════════════════
 #  RENDER UI
 # ══════════════════════════════════════════════════════════════
-st.markdown('<div class="hero-title">Algodhan Performance Viewer</div>', unsafe_allow_html=True)
+st.markdown('<div class="hero-title">Smart-Trade Performance Viewer</div>', unsafe_allow_html=True)
 st.markdown('<div class="hero-sub">Real-Time Quantitative Trading & ETL Analytics Platform — Read-Only Viewer</div>', unsafe_allow_html=True)
 
 # Load data
@@ -727,7 +727,7 @@ if trade_log is not None:
 # ── Footer ────────────────────────────────────────────────────
 st.markdown("""
 <div class="footer">
-    Algodhan Quantitative Trading Platform · Built with Python, Pandas, NumPy, SQLite (WAL), WebSockets, Plotly & Streamlit<br>
+    Smart-Trade Quantitative Trading Platform · Built with Python, Pandas, NumPy, SQLite (WAL), WebSockets, Plotly & Streamlit<br>
     Deployed on AWS EC2 · Secured via Nginx Reverse Proxy · Automated Telegram & Email Alerts
 </div>
 """, unsafe_allow_html=True)
