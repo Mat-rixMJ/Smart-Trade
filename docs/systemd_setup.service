@@ -1,0 +1,12 @@
+[Unit]
+Description=Algodhan Public Dashboard Streamlit App
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/username/project_root
+ExecStart=/home/username/project_root/venv/bin/streamlit run dashboard/public_dashboard.py --server.port 8502 --server.address 127.0.0.1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+pandas
+dhanhq
+yfinance
+python-dotenv
+requests
+streamlit
+pandas_ta
+fyers-apiv3
+plotly
