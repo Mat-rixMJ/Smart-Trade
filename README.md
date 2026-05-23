@@ -140,35 +140,37 @@ The bot uses a sophisticated multi-timeframe, intraday momentum scalping strateg
 
 ---
 
-## 💻 Installation & Usage
+## 📝 Repository Notice (Showcase Version)
 
-**1. Clone and Install Dependencies:**
+**This is a sanitized, public-facing structural showcase.** To protect proprietary trading edges, live API keys, and production databases, the core predictive logic and live execution components have been abstracted. 
+
+The complete, fully operational trading system resides in a private repository.
+
+### Exploring the Codebase
+
+You are welcome to explore the systems engineering, ETL pipelines, and architecture:
+- **Data Ingestion:** Review `core/ws_manager.py` for asynchronous tick stream handling.
+- **Risk Engine:** Review `core/risk_manager.py` for position sizing and capital preservation logic.
+- **UI & Analytics:** Review `dashboard/public_dashboard.py` for the Streamlit presentation layer.
+- **Deployment:** Review the `docs/` folder for sample Nginx reverse proxy and systemd service configurations.
+
+### Running the Dashboard Sandbox
+
+While the live trading engine is abstracted, you can still run the analytics dashboard locally using dummy data:
+
 ```bash
-git clone https://github.com/yourusername/algodhan-platform.git
-cd algodhan-platform
+# 1. Clone the repository
+git clone https://github.com/Mat-rixMJ/Smart-Trade-.git
+cd Smart-Trade-
+
+# 2. Install dependencies
 pip install -r requirements.txt
-```
 
-**2. Configure Environment:**
-Create a `.env` file with your broker credentials:
-```env
-FYERS_CLIENT_ID=your_client_id
-FYERS_SECRET_KEY=your_secret_key
-FYERS_REDIRECT_URI=your_redirect_uri
-```
+# 3. Generate sandbox mock trades
+python dashboard/populate_data.py
 
-**3. Run the Execution Engine:**
-```bash
-python main.py
-```
-
-**4. Run the Analytics Dashboard:**
-```bash
-# Internal Admin Dashboard
-streamlit run dashboard.py --server.port 8501
-
-# Public Presentation Viewer
-streamlit run public_dashboard.py --server.port 8502
+# 4. Run the dashboard viewer
+streamlit run dashboard/public_dashboard.py
 ```
 
 ---
