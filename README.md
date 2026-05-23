@@ -130,6 +130,20 @@ The bot uses a sophisticated multi-timeframe, intraday momentum scalping strateg
 
 ---
 
+## ☁️ AWS Cloud & Deployment Infrastructure
+
+To ensure 24/7 reliability, process isolation, and security, the platform is deployed using modern cloud-native systems engineering practices on **AWS**:
+
+* **Virtual Private Server:** Hosted on an **AWS EC2 (Ubuntu Linux)** instance optimized for low-latency network calls to the broker WebSockets.
+* **Nginx Reverse Proxy Routing:** Configured Nginx to act as a secure gateway. Public traffic hitting port `80` is reverse-proxied to internal localhost ports (`127.0.0.1:8502`), blocking direct public internet access to raw backend ports.
+* **Process Daemonization (Systemd):** Deployed execution engines and dashboards as systemd service daemons, enabling:
+  - Automatic system recovery on process crashes.
+  - Graceful shutdowns and startup sequencing.
+  - Automatic boot-time auto-start.
+* **Network & Security Groups:** Restricted inbound EC2 security groups to only allow port `80/443` (HTTP/HTTPS) and `22` (SSH via restricted IP range), isolating internal application ports.
+
+---
+
 ## 🚀 Future Improvements
 
 - **Ingestion Message Broker:** Integrate Apache Kafka or RabbitMQ to decouple tick data ingestion from processing.
