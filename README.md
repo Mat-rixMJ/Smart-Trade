@@ -1,4 +1,4 @@
-# Real-Time Algorithmic Trading & ETL Analytics Platform
+# Quant ETL Pipeline (Smart-Trade)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Interactive_Dashboard-6366F1?style=for-the-badge&logo=streamlit)](http://15.134.152.37/viewer)
 
@@ -160,8 +160,8 @@ While the live trading engine is abstracted, you can still run the analytics das
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Mat-rixMJ/Smart-Trade-.git
-cd Smart-Trade-
+git clone https://github.com/Mat-rixMJ/quant-etl-pipeline.git
+cd quant-etl-pipeline
 
 # 2. Install dependencies
 pip install -r requirements.txt
