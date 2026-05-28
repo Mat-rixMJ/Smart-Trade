@@ -292,8 +292,8 @@ def load_all_data(db_path, total_cap):
 
 
 # ── Live paper-trade start date (all data before this is simulated) ──────────
-LIVE_START_DATE = "2026-04-09"   # Go-live paper trading start date
-LIVE_START_CAPITAL = 100_000.0   # Fresh starting capital for live chart
+LIVE_START_DATE = "2026-04-01"   # Go-live paper trading start date
+LIVE_START_CAPITAL = 10_000.0    # Fresh starting capital for live chart
 
 def build_equity_chart(df, total_cap):
     """
@@ -449,7 +449,7 @@ def build_monthly_returns_heatmap(df):
     closed['year'] = closed['date_parsed'].dt.year
 
     monthly = closed.groupby(['year', 'month'])['pnl'].sum().reset_index()
-    total_cap = 100_000.0
+    total_cap = 10_000.0
     monthly['return_pct'] = (monthly['pnl'] / total_cap) * 100
 
     pivot = monthly.pivot(index='year', columns='month', values='return_pct').fillna(0)
@@ -880,7 +880,7 @@ for state, health in [(state_main, bot_is_running_main), (state_v8, bot_is_runni
             state['regime'] = "OFFLINE"
 
 # 4. Load Data
-total_cap = 100_000.0
+total_cap = 10_000.0
 df_main, stats_main = load_all_data(DB_PATH_MAIN, total_cap)
 df_v8, stats_v8 = load_all_data(DB_PATH_V8, total_cap)
 
