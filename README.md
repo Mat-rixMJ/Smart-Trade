@@ -161,6 +161,8 @@ These runs utilize the **exact Dhan intraday brokerage fee structures** and a **
 | **Paper Trade (OOS)** | 1.5 Mos (2026) | 45 | 66.7% | 2.06 | **4.6%** | **+17.6%** | 🟢 PASS |
 
 ### 🟡 Experimental Bot v8 (Regime-Switching & ML-Filtered)
+
+#### 1. Baseline v8 (Original, Unoptimized)
 | Regime | Period | Total Trades | Win Rate | Profit Factor | Max Drawdown | Return | Status |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Crash 2020** | 1 Year (2020) | 828 | 45.9% | 1.36 | **11.1%** | **+195.7%** | 🟢 PASS |
@@ -168,6 +170,15 @@ These runs utilize the **exact Dhan intraday brokerage fee structures** and a **
 | **Bear 2022** | 1 Year (2022) | 992 | 51.3% | 1.41 | **13.6%** | **+231.9%** | 🟢 PASS |
 | **Sideways 2023** | 1 Year (2023) | 1335 | 52.8% | 1.20 | 30.4% | **+124.4%** | ❌ FAIL (High DD) |
 | **Paper Trade (OOS)** | 1.5 Mos (2026) | 108 | 49.1% | 1.15 | 16.8% | **+10.7%** | ❌ FAIL (High DD) |
+
+#### 2. Optimized v8 (Max Trades = 2 & 0.6% Previous Day Range Filter)
+| Regime | Period | Total Trades | Win Rate | Profit Factor | Max Drawdown | Return | Status |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Crash 2020** | 1 Year (2020) | 746 | 47.9% | 1.48 | **12.7%** | **+223.5%** | 🟢 PASS |
+| **Bull 2021** | 1 Year (2021) | 827 | 49.0% | 1.30 | 27.9% | **+154.5%** | ❌ FAIL (High DD) |
+| **Bear 2022** | 1 Year (2022) | 905 | 49.9% | 1.33 | 17.5% | **+177.5%** | ❌ FAIL (High DD) |
+| **Sideways 2023** | 1 Year (2023) | 1136 | 54.8% | 1.23 | 29.8% | **+122.7%** | ❌ FAIL (High DD) |
+| **Paper Trade (OOS)** | 1.5 Mos (2026) | 109 | 47.7% | 1.12 | **9.8%** | **+8.2%** | 🟢 PASS |
 
 ### ❌ Baseline Strategy (Raw v15, Unoptimized)
 | Regime | Period | Total Trades | Win Rate | Profit Factor | Max Drawdown | Return | Status |
