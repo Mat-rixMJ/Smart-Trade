@@ -147,20 +147,29 @@ The conceptual strategy template (**VWAP Pullback Scalper**) is built around a c
 
 ## 📊 Backtesting & Out-Of-Sample Performance Results
 
-To demonstrate robustness and prove the working model, the strategy was backtested across historical regimes (2020–2023) and simulated as a paper trade for the out-of-sample (OOS) period (April 9, 2026 – May 28, 2026). The runs compare the raw, unoptimized baseline rules against the optimized **God Mode v15 Pro** model (which leverages the high-confidence ML filter to bypass low-probability setups).
+To demonstrate robustness and prove the working model, the strategies were backtested across historical regimes (2020–2023) and simulated as a paper trade for the out-of-sample (OOS) period (April 9, 2026 – May 28, 2026). The runs compare the raw, unoptimized baseline rules against both the optimized **God Mode v15 Pro** and the **Experimental Bot v8 (Regime-Switching)** models.
 
-These runs utilize the **exact Dhan intraday brokerage fee structures** and a **realistic 0.05% slippage model** per transaction:
+These runs utilize the **exact Dhan intraday brokerage fee structures** and a **zero slippage benchmark** (aligned with the server compounding code):
 
 ### 🟢 God Mode v15 Pro (Optimized & ML-Filtered)
 | Regime | Period | Total Trades | Win Rate | Profit Factor | Max Drawdown | Return | Status |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Crash 2020** | 1 Year (2020) | 377 | 65.3% | 1.96 | **8.5%** | **+164.2%** | 🟢 PASS |
-| **Bull 2021** | 1 Year (2021) | 361 | 62.3% | 1.59 | **5.7%** | **+98.1%** | 🟢 PASS |
-| **Bear 2022** | 1 Year (2022) | 346 | 72.5% | 2.45 | **3.8%** | **+158.0%** | 🟢 PASS |
-| **Sideways 2023** | 1 Year (2023) | 447 | 59.1% | 1.25 | **9.2%** | **+46.8%** | 🟢 PASS |
-| **Paper Trade (OOS)** | 1.5 Mos (2026) | 42 | 69.0% | 2.36 | **3.5%** | **+19.6%** | 🟢 PASS |
+| **Crash 2020** | 1 Year (2020) | 363 | 70.0% | 2.34 | **4.1%** | **+196.8%** | 🟢 PASS |
+| **Bull 2021** | 1 Year (2021) | 363 | 61.7% | 1.57 | **7.0%** | **+95.1%** | 🟢 PASS |
+| **Bear 2022** | 1 Year (2022) | 350 | 65.7% | 1.82 | **6.6%** | **+114.4%** | 🟢 PASS |
+| **Sideways 2023** | 1 Year (2023) | 427 | 62.3% | 1.50 | **5.5%** | **+78.8%** | 🟢 PASS |
+| **Paper Trade (OOS)** | 1.5 Mos (2026) | 45 | 66.7% | 2.06 | **4.6%** | **+17.6%** | 🟢 PASS |
 
-### ❌ Baseline Strategy (Raw, Unoptimized)
+### 🟡 Experimental Bot v8 (Regime-Switching & ML-Filtered)
+| Regime | Period | Total Trades | Win Rate | Profit Factor | Max Drawdown | Return | Status |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Crash 2020** | 1 Year (2020) | 828 | 45.9% | 1.36 | **11.1%** | **+195.7%** | 🟢 PASS |
+| **Bull 2021** | 1 Year (2021) | 922 | 49.2% | 1.27 | 20.3% | **+153.7%** | ❌ FAIL (High DD) |
+| **Bear 2022** | 1 Year (2022) | 992 | 51.3% | 1.41 | **13.6%** | **+231.9%** | 🟢 PASS |
+| **Sideways 2023** | 1 Year (2023) | 1335 | 52.8% | 1.20 | 30.4% | **+124.4%** | ❌ FAIL (High DD) |
+| **Paper Trade (OOS)** | 1.5 Mos (2026) | 108 | 49.1% | 1.15 | 16.8% | **+10.7%** | ❌ FAIL (High DD) |
+
+### ❌ Baseline Strategy (Raw v15, Unoptimized)
 | Regime | Period | Total Trades | Win Rate | Profit Factor | Max Drawdown | Return | Status |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Crash 2020** | 1 Year (2020) | 546 | 48.0% | 0.70 | 69.3% | -83.3% | ❌ FAIL |
