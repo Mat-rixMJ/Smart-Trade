@@ -1,15 +1,15 @@
 # Quant ETL Pipeline (Smart-Trade Showcase)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Mat-rixMJ/Smart-Trade-/main/dashboard_preview.png" alt="Algodhan Platform Dashboard Mockup" width="800" style="border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.5);"/>
+  <img src="https://raw.githubusercontent.com/Mat-rixMJ/Smart-Trade/main/dashboard_preview.png" alt="Algodhan Platform Dashboard Mockup" width="800" style="border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.5);"/>
 </p>
 
 <p align="center">
   <a href="http://15.134.152.37/viewer"><img src="https://img.shields.io/badge/Live_Demo-smtrade.space-6366F1?style=for-the-badge&logo=streamlit" alt="Live Demo"/></a>
   <a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python" alt="Python Version"/></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"/></a>
-  <a href="https://github.com/Mat-rixMJ/Smart-Trade-/stargazers"><img src="https://img.shields.io/github/stars/Mat-rixMJ/Smart-Trade-?style=for-the-badge" alt="GitHub Stars"/></a>
-  <a href="https://github.com/Mat-rixMJ/Smart-Trade-/commits/main"><img src="https://img.shields.io/github/last-commit/Mat-rixMJ/Smart-Trade-?style=for-the-badge" alt="Last Commit"/></a>
+  <a href="https://github.com/Mat-rixMJ/Smart-Trade/stargazers"><img src="https://img.shields.io/github/stars/Mat-rixMJ/Smart-Trade?style=for-the-badge" alt="GitHub Stars"/></a>
+  <a href="https://github.com/Mat-rixMJ/Smart-Trade/commits/main"><img src="https://img.shields.io/github/last-commit/Mat-rixMJ/Smart-Trade?style=for-the-badge" alt="Last Commit"/></a>
 </p>
 
 ---
@@ -167,8 +167,8 @@ You can run the public Streamlit dashboard in a sandbox state populated with moc
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Mat-rixMJ/Smart-Trade-.git
-   cd Smart-Trade-
+   git clone https://github.com/Mat-rixMJ/Smart-Trade.git
+   cd Smart-Trade
    ```
 
 2. **Install Dependencies**:
